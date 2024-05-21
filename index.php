@@ -60,9 +60,14 @@
                 <h4 class="p-3 mb-2 bg-primary"><?php echo $hotel['name']; ?></h4>
                 <div class="card-body">
                     <p><?php echo $hotel['description']?></p>
-                    <p><?php echo $hotel['parking']?></p>
-                    <p><?php echo $hotel['vote']?></p>
-                    <p><?php echo $hotel['distance_to_center']?></p>
+                    <p><?php if($hotel['parking']) {
+                        echo "true";
+                        }else{
+                            echo "false";
+                        }?></p>
+                    
+                    <p>Voto: <?php echo $hotel['vote']?></p>
+                    <p>Distanza dal centro: <?php echo $hotel['distance_to_center']?> km</p>
     
                 </div>
     

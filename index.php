@@ -40,4 +40,36 @@
 
     ];
 
-?>
+    var_dump($hotels);
+    ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="mt-5">Hotel List</h1>
+
+    <?php foreach ($hotels as $hotel) { ?>
+        <div>
+            <h4><?php echo $hotel['name']; ?></h4>
+            <p><?php echo $hotel['description']?></p>
+            <p><?php echo $hotel['parking']?></p>
+            <p><?php echo $hotel['vote']?></p>
+            <p><?php echo $hotel['distance_to_center']?></p>
+
+
+        
+        </div>
+
+    <?php } ?>
+
+
+
+
+    
+</body>
+</html>
